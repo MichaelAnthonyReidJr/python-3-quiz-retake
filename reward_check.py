@@ -2,21 +2,27 @@
 def find_best_user(file_path):
     name = " "
     max = 0
-    
+    first_Iteration = True    
     with open (file_path, 'r') as file:
         for eachline in file:
-            lines = file.readline()
-            words = lines.split(",")
-            print(words)
-            
-            for i in range(len(words)):
-                print(words)
-                
-                if words[5] > max:
-                    max = int(words[5])
-                    #print(words[5])
+            if first_Iteration == True:
+                first_Iteration = False
+                continue
+            line = eachline.replace("\n", " ")
+            words = line.split(",")
+            # print(words)
+            # print(len(words))
+            for i in range(1):
+                value = int(words[5])
+                print(value)
+                if value > max:
+                    max = value
                     name = words[0]
-                return name
+        print(name)
+        return name
+                
+                
+
              
     
     
