@@ -1,4 +1,3 @@
-
 def find_best_user(file_path):
     name = " "
     max = 0
@@ -14,11 +13,11 @@ def find_best_user(file_path):
             # print(len(words))
             for i in range(1):
                 value = int(words[5])
-                print(value)
+                # print(value)
                 if value > max:
                     max = value
                     name = words[0]
-        print(name)
+        # print(name)
         return name
                 
                 
